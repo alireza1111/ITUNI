@@ -1,38 +1,41 @@
 package se.chalmers.fx.helloWorld.address.view;
 
 
+import java.io.IOException;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import se.chalmers.fx.helloWorld.address.Main;
 
 public class UI_testController {
 	
-	private Main main;
-	@FXML
-	private TextField textField;
-	
-	@FXML
-	private Button btn;
-	
-	@FXML
-	private Button btnNew;
-	
-	@FXML
-	private void handleBtn(){
-		textField.setText("Hellooooooooooooooooooo!");
-	}
-    /**
-     * Shows the person overview inside the root layout.
-     */
-	@FXML
-    private void handlebtnNew() {
-    	try{
-    		main.showDialog();
-		}catch(Exception e){
-		    e.printStackTrace();
-		}
+
+    @FXML
+    private TextField textField;
+
+    @FXML
+    void handleBtn(ActionEvent event) {
+    	textField.setText(textField.getText()+"Helloooo! ");
     }
+
+    @FXML
+    void handlebtnNew(ActionEvent event) throws IOException {
+
+    	FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/se/chalmers/fx/helloWorld/address/view/Dialog.fxml"));
+    	Parent root1 = (Parent) fxmlLoader.load();
+    	Stage stage = new Stage();
+    	stage.setScene(new Scene(root1)); 
+    	stage.show();
+        // Hide this current window (if this is what you want)
+       // ((Node)(event.getSource())).getScene().getWindow().hide();
+    }
+    
 
     public void setApp(Main application){
     }
