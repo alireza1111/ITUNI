@@ -1,19 +1,14 @@
-import java.util.Iterator;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.xml.utils.Constants;
 import org.junit.*;
 import static org.junit.Assert.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.gargoylesoftware.htmlunit.javascript.host.dom.Document;
 
 
 public class ID1331 {
@@ -24,7 +19,7 @@ public class ID1331 {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.gecko.driver", "C:\\Users\\alidav\\Downloads\\geckodriver-v0.14.0-win64\\geckodriver.exe");
+	System.setProperty("webdriver.gecko.driver", "C:\\Users\\alidav\\Downloads\\geckodriver-v0.14.0-win64\\geckodriver.exe"); //gecko driver till Firefox
     driver = new FirefoxDriver();
     baseUrl = "https://admin-uat.portal.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -33,22 +28,20 @@ public class ID1331 {
   @Test
   public void testId1331() throws Exception {
 		WebDriverWait wait = (new WebDriverWait(driver, 30));			//explicit wait
-		//WebDriverWait wait2 = (new WebDriverWait(driver, 50));			//explicit wait
 		driver.get(baseUrl);
-		//wait.until(ExpectedConditions.elementToBeClickable(CalTab));
 		WebElement CalTab;
 		CalTab= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".last-tab>a")));
 		CalTab.click();
-		 // driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		WebElement FlerHandelser;
-		FlerHandelser= wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Fler händelser")));  //Explicit wait
+		FlerHandelser= wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Fler hÃ¤ndelser")));  //Explicit wait
 		FlerHandelser.click();
+		
 		/*
-		 * Jag använder waitAndClick istället för:
+		 * Jag anvÃ¤nder waitAndClick istÃ¤llet fÃ¶r:
 		 * driver.findElement(By.cssSelector("#zz7_SiteActionsMenu > span")).click();
 		 */
-		//Click Webbplatsåtgärder
 		
+		//Click WebbplatsÃ¥tgÃ¤rder
 		WebElement WPatg;
 		WebElement t=null;
 		t= wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='ctl00_MSO_ContentDiv']/div[2]/div[2]/div/div[1]/div/div[4]/p[1]/button")));
@@ -56,63 +49,52 @@ public class ID1331 {
 			WPatg= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='zz7_SiteActionsMenu_t']")));
 			WPatg.click();
 		}
-/*		if (driver instanceof JavascriptExecutor) {
-			((JavascriptExecutor)driver).executeScript(""
-					+ ""
-					+ "var wPlatsÅt= document.querySelector('.ms-dlgFrame').contentDocument.querySelector('zz7_SiteActionsMenu_t');"
-					+ "wPlatsÅt.click();"
-					+ "");
-		} else {
-		    throw new IllegalStateException("This driver does not support JavaScript!");*/
 		
 		//Click Nysida
 		WebElement NySida;
 		NySida= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#mp1_0_2_Anchor")));
 		NySida.click();
-		Thread.sleep(4000);
-		// //forsÃ¤tt med js kommand
-		//textBox affairs
+		Thread.sleep(5000);
+		// //fortsÃ¤tt med js kommand
+		//textBtox affairs
 		if (driver instanceof JavascriptExecutor) {
 			((JavascriptExecutor)driver).executeScript(""
 					+ "var tBox= document.querySelector('.ms-dlgFrame').contentDocument.querySelector('#ctl00_PlaceHolderMain_nameInput');"
-					+ "tBox.setAttribute('value','Testcase 13.1.16 Global');"
+					+ "tBox.setAttribute('value','Testcase 13.3.1 Global');"
 					+ "var btn= document.querySelector('.ms-dlgFrame').contentDocument.querySelector('#ctl00_PlaceHolderMain_createButton');"
 					+ "btn.click();"
-					+ "var hLinkIng= document."
-					+ "");
-		} else {
-				  throw new IllegalStateException("This driver does not support JavaScript!");
+					);
 		}
-		WebElement textIngress,textIngress2;
-		textIngress= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_EmptyHtmlPanel']/a")));
-		textIngress.click();
-		textIngress.sendKeys("This is Ingress!!");
-		textIngress2= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_displayContent']")));
-		textIngress2.sendKeys("Ingres Test!");
+		Thread.sleep(5000);
+		driver.findElement(By.cssSelector("#ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_displayContent"));
+		
+		//js kommand till ingress text innehÃ¥ll (RichText document)
+		if (driver instanceof JavascriptExecutor){
+			((JavascriptExecutor)driver).executeScript(""
+					+"document.querySelector('#ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_EmptyHtmlPanel').click();"
+					+"var txtIngress= document.querySelector('#ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_displayContent');"
+					+ "txtIngress.textContent= 'â€‹Det Ã¤r bara JavaScript testScript till testID13.3.7';"
+					+ "");
+		}
+		//visa element pÃ¥
 		driver.findElement(By.xpath(".//*[@id='ctl00_PlaceHolderMain_ctl01_ctl01_ctl02editableRegion']")).click();
-		driver.findElement(By.xpath(".//*[@id='ctl00_PlaceHolderMain_ctl01_ctl01_ctl02editableRegion']")).sendKeys(".Global ");
-/*		WebElement VEPtag;
-		VEPtag= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='LBL_12']")));
-		//DoubleClick on element
-		Actions act = new Actions(driver);
-		act.doubleClick(VEPtag);*/
-		//driver.findElement(By.id("LBL_12")).click();
-		driver.findElement(By.id("ctl00_OkButton")).click();
-		driver.findElement(By.cssSelector("#ctl00_PlaceHolderMain_ctl01_ctl02_ctl02controlHolder > img.ms-taxonomy-browser-button")).click();
-		driver.findElement(By.id("LBL_9")).click();
-		driver.findElement(By.id("ctl00_OkButton")).click();
-		driver.findElement(By.cssSelector("#ui-id-847 > i")).click();
+		driver.findElement(By.xpath(".//*[@id='ctl00_PlaceHolderMain_ctl01_ctl01_ctl02editableRegion']")).sendKeys("Global; ");
+		//plats
 		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_TextField2_ctl00_TextField")).clear();
 		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_TextField2_ctl00_TextField")).sendKeys("Chalmersplatsen");
-		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_StartDate_ctl00_DateTimeField_DateTimeFieldDateDatePickerImage")).click();
-		driver.findElement(By.id("20170302")).click();
-		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_EndDate_ctl00_DateTimeField_DateTimeFieldDateDatePickerImage")).click();
-		driver.findElement(By.id("20170302")).click();
+		//startDatum
+		Thread.sleep(3000);
+		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_StartDate_ctl00_DateTimeField_DateTimeFieldDate")).sendKeys("2017-03-23");
+		//slutDatun
+		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_EndDate_ctl00_DateTimeField_DateTimeFieldDate")).sendKeys("2017-03-24");
 		new Select(driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_EndDate_ctl00_DateTimeField_DateTimeFieldDateHours"))).selectByVisibleText("23:");
 		driver.findElement(By.id("ctl00_PageStateActionButton")).click();
 		driver.findElement(By.xpath("//li[@id='Ribbon.PublishTab-title']/a/span")).click();
-		driver.findElement(By.xpath("//a[@id='Ribbon.PublishTab.Publishing.Publish-SelectedItem']/span/span/img")).click();
-		driver.findElement(By.id("checkincomments")).clear();
+		//publicera
+		WebElement pub;
+		pub= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='Ribbon.PublishTab-title']/a/span[1]")));
+		pub.click();
+		driver.findElement(By.xpath(".//*[@id='Ribbon.PublishTab.Publishing.Publish-SelectedItem']/span[1]")).click();
 		driver.findElement(By.id("checkincomments")).sendKeys("test 13.3.1");
 		driver.findElement(By.id("statechangedialog_okbutton")).click();
   }
