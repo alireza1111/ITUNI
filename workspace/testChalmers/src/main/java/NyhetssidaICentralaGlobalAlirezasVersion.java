@@ -27,19 +27,10 @@ public class NyhetssidaICentralaGlobalAlirezasVersion {
   public void testNyhetssidaICentralaGlobalAlirezasVersion() throws Exception {
 		WebDriverWait wait = (new WebDriverWait(driver, 20));			//explicit wait
 		driver.get(baseUrl);
-		//.::::Explicit wait:::::.
 		//Click MeraNyheter
 		WebElement MerNyheter;
 		MerNyheter= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='g_7fda04e8_8021_433a_b428_d7c69decc721-0']/div/a")));
-		//driver.findElement(By.xpath(".//*[@id='g_7fda04e8_8021_433a_b428_d7c69decc721-0']/div/a")).click();
 		MerNyheter.click();		
-		/*
-		 * .::::Explicit wait:::::.
-		 * Jag använder waitAndClick istället för:
-		 * Thread.sleep(5000);
-		 * driver.findElement(By.xpath(".//*[@id='zz7_SiteActionsMenu_t']")).click();
-		 */
-
 		//Click Webbplatsåtgärder
 		WebElement WPatg;
 		WPatg= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='zz7_SiteActionsMenu_t']")));

@@ -1,6 +1,8 @@
 import java.util.concurrent.TimeUnit;
 
 import org.junit.*;
+import org.junit.runner.JUnitCore;
+
 import static org.junit.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,7 +21,7 @@ public class ID1331 {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.gecko.driver", "C:\\Users\\alidav\\Downloads\\geckodriver-v0.14.0-win64\\geckodriver.exe"); //gecko driver till Firefox
+	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe"); //gecko driver till Firefox
     driver = new FirefoxDriver();
     baseUrl = "https://admin-uat.portal.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -140,4 +142,8 @@ public class ID1331 {
       acceptNextAlert = true;
     }
   }
+  public static void main(String[] args) throws Exception {                    
+      JUnitCore.main(
+        "ID1331");            
+}
 }
