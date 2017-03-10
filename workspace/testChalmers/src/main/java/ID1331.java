@@ -62,7 +62,7 @@ public class ID1331 {
 		if (driver instanceof JavascriptExecutor) {
 			((JavascriptExecutor)driver).executeScript(""
 					+ "var tBox= document.querySelector('.ms-dlgFrame').contentDocument.querySelector('#ctl00_PlaceHolderMain_nameInput');"
-					+ "tBox.setAttribute('value','Testcase 13.3.1 Global');"
+					+ "tBox.setAttribute('value','Testcase 13.3');"
 					+ "var btn= document.querySelector('.ms-dlgFrame').contentDocument.querySelector('#ctl00_PlaceHolderMain_createButton');"
 					+ "btn.click();"
 					);
@@ -75,7 +75,7 @@ public class ID1331 {
 			((JavascriptExecutor)driver).executeScript(""
 					+"document.querySelector('#ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_EmptyHtmlPanel').click();"
 					+"var txtIngress= document.querySelector('#ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_displayContent');"
-					+ "txtIngress.textContent= '​Det är bara JavaScript testScript till testID13.3.7';"
+					+ "txtIngress.textContent= '​Det är bara JavaScript testScript till testID13.3';"
 					+ "");
 		}
 		//visa element på
@@ -87,17 +87,15 @@ public class ID1331 {
 		//startDatum
 		Thread.sleep(3000);
 		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_StartDate_ctl00_DateTimeField_DateTimeFieldDate")).sendKeys("2017-03-23");
-		//slutDatun
+		//slutDatum
 		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_EndDate_ctl00_DateTimeField_DateTimeFieldDate")).sendKeys("2017-03-24");
 		new Select(driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_EndDate_ctl00_DateTimeField_DateTimeFieldDateHours"))).selectByVisibleText("23:");
-		driver.findElement(By.id("ctl00_PageStateActionButton")).click();
-		driver.findElement(By.xpath("//li[@id='Ribbon.PublishTab-title']/a/span")).click();
 		//publicera
 		WebElement pub;
 		pub= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='Ribbon.PublishTab-title']/a/span[1]")));
 		pub.click();
 		driver.findElement(By.xpath(".//*[@id='Ribbon.PublishTab.Publishing.Publish-SelectedItem']/span[1]")).click();
-		driver.findElement(By.id("checkincomments")).sendKeys("test 13.3.1");
+		driver.findElement(By.id("checkincomments")).sendKeys("test 13.3");
 		driver.findElement(By.id("statechangedialog_okbutton")).click();
   }
 

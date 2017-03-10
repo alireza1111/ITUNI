@@ -90,14 +90,13 @@ public class ID134 {
 		//slutDatun
 		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_EndDate_ctl00_DateTimeField_DateTimeFieldDate")).sendKeys("2017-03-24");
 		new Select(driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_EndDate_ctl00_DateTimeField_DateTimeFieldDateHours"))).selectByVisibleText("23:");
-		driver.findElement(By.id("ctl00_PageStateActionButton")).click();
 		driver.findElement(By.xpath("//li[@id='Ribbon.PublishTab-title']/a/span")).click();
 		//publicera
 		WebElement pub;
 		pub= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='Ribbon.PublishTab-title']/a/span[1]")));
 		pub.click();
 		driver.findElement(By.xpath(".//*[@id='Ribbon.PublishTab.Publishing.Publish-SelectedItem']/span[1]")).click();
-		driver.findElement(By.id("checkincomments")).sendKeys("test 13.4.1");
+		driver.findElement(By.id("checkincomments")).sendKeys("test 13.4");
 		driver.findElement(By.id("statechangedialog_okbutton")).click();
   }
 
