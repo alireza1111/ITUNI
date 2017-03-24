@@ -99,5 +99,8 @@
 	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/client-combined-3.0.1-nodeps.jar"/>
+	<classpathentry kind="lib" path="D:/EyeAutomate1.5/EyeAutomate.jar"/>
+	<classpathentry kind="lib" path="D:/EyeAutomate1.5/EyeAutomateLaunchpad.jar"/>
+	<classpathentry kind="lib" path="D:/EyeAutomate1.5/EyeAutomateStudio.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

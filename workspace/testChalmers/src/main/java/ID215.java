@@ -8,6 +8,7 @@ import org.junit.runner.JUnitCore;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -19,8 +20,8 @@ public class ID215 {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe");
-    driver = new FirefoxDriver();
+	System.setProperty("webdriver.chrome.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\Utveckling\\Testverksamhet\\EyeAutomate\\WebDriver\\chromedriver.exe");
+    driver = new ChromeDriver();
     baseUrl = "http://uat.portal.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }

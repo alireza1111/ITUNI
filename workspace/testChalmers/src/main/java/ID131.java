@@ -5,8 +5,8 @@ import org.junit.runner.JUnitCore;
 
 import static org.junit.Assert.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,21 +21,21 @@ public class ID131 {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe"); //gecko driver till Firefox
-    driver = new FirefoxDriver();
+		System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe");//gecko driver till Firefox
+	    driver = new FirefoxDriver();
     baseUrl = "https://admin-uat.portal.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
-  public void testId1331() throws Exception {
+  public void testId131() throws Exception {
 		WebDriverWait wait = (new WebDriverWait(driver, 30));			//explicit wait
 		driver.get(baseUrl);
 		WebElement CalTab;
 		CalTab= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".last-tab>a")));
 		CalTab.click();
 		WebElement FlerHandelser;
-		FlerHandelser= wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Fler händelser")));  //Explicit wait
+		FlerHandelser= wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fler händelser")));  //Explicit wait
 		FlerHandelser.click();
 		
 		/*
@@ -62,7 +62,7 @@ public class ID131 {
 		if (driver instanceof JavascriptExecutor) {
 			((JavascriptExecutor)driver).executeScript(""
 					+ "var tBox= document.querySelector('.ms-dlgFrame').contentDocument.querySelector('#ctl00_PlaceHolderMain_nameInput');"
-					+ "tBox.setAttribute('value','Testcase 13.1');"
+					+ "tBox.setAttribute('value','Testcase 13.1.1');"
 					+ "var btn= document.querySelector('.ms-dlgFrame').contentDocument.querySelector('#ctl00_PlaceHolderMain_createButton');"
 					+ "btn.click();"
 					);
