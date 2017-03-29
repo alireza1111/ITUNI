@@ -7,6 +7,11 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+/**
+ * Sidfot - Senaste nyheterna:	Visar senaste nyheterna. Verifiera att den nyhet du skapat syns.
+ * @author alidav
+ *
+ */
 public class ID243 {
   private WebDriver driver;
   private String baseUrl;
@@ -15,8 +20,8 @@ public class ID243 {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.gecko.driver", "C:\\Users\\alidav\\Downloads\\geckodriver-v0.14.0-win64\\geckodriver.exe");  //for Selenium 2.x and higher
-    driver = new FirefoxDriver();
+	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\IT-Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe");  //for Selenium 2.x and higher
+	driver = new FirefoxDriver();
     baseUrl = "http://uat.portal.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }

@@ -25,8 +25,8 @@ public class IDsökning {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.chrome.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\Utveckling\\Testverksamhet\\EyeAutomate\\WebDriver\\chromedriver.exe"); //gecko driver till Firefox
-    driver = new ChromeDriver();
+	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\IT-Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe"); //gecko driver till Firefox
+    driver = new FirefoxDriver();
     baseUrl = "https://admin-uat.portal.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
@@ -40,7 +40,7 @@ public class IDsökning {
 		CalTab.clear();
 		CalTab.sendKeys("Alireza Davoudian");
 		CalTab.sendKeys(Keys.RETURN);
-		Dimension size=wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("alidav@chalmers.se"))).getSize();
+		Dimension size=wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Alireza Davoudian"))).getSize();
 		if (size==null)
 			JOptionPane.showMessageDialog(frame,"Kunde inte hittas!");
 		else
@@ -49,7 +49,7 @@ public class IDsökning {
 
   @After
   public void tearDown() throws Exception {
-    //driver.quit();
+    driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);

@@ -1,22 +1,23 @@
-
-
 import java.util.regex.Pattern;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import java.util.concurrent.TimeUnit;
+
+import org.hamcrest.CoreMatchers;
 import org.junit.*;
 import org.junit.runner.JUnitCore;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-/**
- * Toppmeny - Språklänk: bekräftar Länk fungerar och leder EJ till admin-sida om man är opåloggad!
- * @author alidav
- *
- */
-public class ID215 {
+import org.openqa.selenium.support.ui.WebDriverWait;	
+
+public class testJUnitEyeAutomate {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -24,21 +25,32 @@ public class ID215 {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.chrome.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\IT-Utveckling\\Testverksamhet\\EyeAutomate\\WebDriver\\chromedriver.exe");
-    driver = new ChromeDriver();
-    baseUrl = "http://uat.portal.chalmers.se/sv/Sidor/default.aspx";
+	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\IT-Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe");
+    driver = new FirefoxDriver();
+    baseUrl = "https://en.wikipedia.org/wiki/Alireza_Assar";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
   public void testId215() throws Exception {
-		driver.get(baseUrl + "/sv/Sidor/default.aspx");
-		driver.findElement(By.cssSelector("#ctl00_ctl41_ctl00_lnkUrlRelation > span")).click();
+	  WebDriverWait wait= (new WebDriverWait(driver, 30));
+		driver.get(baseUrl);
+		String element= driver.findElement(By.xpath(".//*[@id='mw-content-text']/p[4]")).getText();
+		try{
+			Assert.assertThat(element, CoreMatchers.containsString("Javad Maaroufi and Mostafa Pourtorab"));
+		}
+		catch(AssertionError e){
+			JFrame frame=new JFrame();
+			JOptionPane.showMessageDialog(frame,
+				   e,"Error", JOptionPane.ERROR_MESSAGE);
+			driver.quit();
+			throw e;
+		}		
   }
 
   @After
   public void tearDown() throws Exception {
-    driver.quit();
+   // driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);
@@ -77,8 +89,11 @@ public class ID215 {
       acceptNextAlert = true;
     }
   }
+
   public static void main(String[] args) throws Exception {                    
-      JUnitCore.main(
-        "ID215");            
-}
+    JUnitCore.main(
+            "testJUnitEyeAutomate");
+
+	}
+
 }

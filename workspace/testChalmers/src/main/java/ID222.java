@@ -10,6 +10,11 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+/**
+ * Huvudmeny - Utbildning: Bekräftar länk fungerar och leder EJ till admin-sida om man är opåloggad
+ * @author alidav
+ *
+ */
 public class ID222 {
   private WebDriver driver;
   private String baseUrl;
@@ -18,7 +23,7 @@ public class ID222 {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.gecko.driver", "C:\\Users\\alidav\\Downloads\\geckodriver-v0.14.0-win64\\geckodriver.exe");  //for Selenium 2.x and higher
+	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\IT-Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe");  //for Selenium 2.x and higher
     driver = new FirefoxDriver();
     baseUrl = "http://uat.portal.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

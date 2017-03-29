@@ -8,6 +8,11 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+/**
+ * Chalmers i Media sidan - Knapp Dela sida	Pop-up fönster dyker upp med val att dela till. 
+ * @author alidav
+ *
+ */
 public class ID333 {
   private WebDriver driver;
   private String baseUrl;
@@ -16,7 +21,7 @@ public class ID333 {
 
   @Before
   public void setUp() throws Exception {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\alidav\\Downloads\\geckodriver-v0.14.0-win64\\geckodriver.exe");  //for Selenium 2.x and higher
+	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\IT-Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe");  //for Selenium 2.x and higher
     driver = new FirefoxDriver();
     baseUrl = "http://www.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

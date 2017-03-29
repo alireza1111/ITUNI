@@ -16,6 +16,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * Kalendersida - Händelse i Centrala Kalendariet - Utseende
+ * @author alidav
+ *
+ */
 public class ID132 {
   private WebDriver driver;
   private String baseUrl;
@@ -25,8 +30,8 @@ public class ID132 {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.chrome.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\Utveckling\\Testverksamhet\\EyeAutomate\\WebDriver\\chromedriver.exe");//gecko driver till Firefox
-    driver = new ChromeDriver();
+	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\IT-Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe");//gecko driver till Firefox
+    driver = new FirefoxDriver();
     baseUrl = "https://admin-uat.portal.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }

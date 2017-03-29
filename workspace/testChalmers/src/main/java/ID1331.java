@@ -12,7 +12,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
+/**
+ * Kalendersida - Händelse i Centrala Kalendariet - Skapa med gårdagens datum
+ * @author alidav
+ *
+ */
 
 public class ID1331 {
   private WebDriver driver;
@@ -22,7 +26,7 @@ public class ID1331 {
 
   @Before
   public void setUp() throws Exception {
-		System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe");//gecko driver till Firefox
+		System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\IT-Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe");//gecko driver till Firefox
 	    driver = new FirefoxDriver();
     baseUrl = "https://admin-uat.portal.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -36,13 +40,8 @@ public class ID1331 {
 		CalTab= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".last-tab>a")));
 		CalTab.click();
 		WebElement FlerHandelser;
-		FlerHandelser= wait.until(ExpectedConditions.elementToBeClickable(By.linkText("FLER HÄNDELSER")));  //Explicit wait
+		FlerHandelser= wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fler händelser")));  //Explicit wait
 		FlerHandelser.click();
-		
-		/*
-		 * Jag använder waitAndClick istället för:
-		 * driver.findElement(By.cssSelector("#zz7_SiteActionsMenu > span")).click();
-		 */
 		
 		//Click Webbplatsåtgärder
 		WebElement WPatg;
@@ -57,40 +56,30 @@ public class ID1331 {
 		WebElement NySida;
 		NySida= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#mp1_0_2_Anchor")));
 		NySida.click();
-		Thread.sleep(5000);
-		// //fortsätt med js kommand
-		//textBtox affairs
-		if (driver instanceof JavascriptExecutor) {
-			((JavascriptExecutor)driver).executeScript(""
-					+ "var tBox= document.querySelector('.ms-dlgFrame').contentDocument.querySelector('#ctl00_PlaceHolderMain_nameInput');"
-					+ "tBox.setAttribute('value','Testcase 13.3');"
-					+ "var btn= document.querySelector('.ms-dlgFrame').contentDocument.querySelector('#ctl00_PlaceHolderMain_createButton');"
-					+ "btn.click();"
-					);
-		}
-		Thread.sleep(5000);
-		driver.findElement(By.cssSelector("#ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_displayContent"));
-		
-		//js kommand till ingress text innehåll (RichText document)
-		if (driver instanceof JavascriptExecutor){
-			((JavascriptExecutor)driver).executeScript(""
-					+"document.querySelector('#ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_EmptyHtmlPanel').click();"
-					+"var txtIngress= document.querySelector('#ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_displayContent');"
-					+ "txtIngress.textContent= '​Det är bara JavaScript testScript till testID13.3';"
-					+ "");
-		}
-		//visa element på
-		driver.findElement(By.xpath(".//*[@id='ctl00_PlaceHolderMain_ctl01_ctl01_ctl02editableRegion']")).click();
-		driver.findElement(By.xpath(".//*[@id='ctl00_PlaceHolderMain_ctl01_ctl01_ctl02editableRegion']")).sendKeys("Global; ");
+		Thread.sleep(4000);
+		//textBox affairs
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(0);
+		WebElement tBox= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#ctl00_PlaceHolderMain_nameInput")));
+		tBox.sendKeys("Testcase 13.3");
+		driver.findElement(By.cssSelector("#ctl00_PlaceHolderMain_createButton")).click();
+		driver.switchTo().defaultContent();
+		//Fylla sidansfält
+		Thread.sleep(5000);		
+		driver.findElement(By.cssSelector("#ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_EmptyHtmlPanel")).click();
+		WebElement txtIngress= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#ctl00_PlaceHolderMain_ctl01_ChalmersIntroductionTextField_RichHtmlField_displayContent")));
+		txtIngress.sendKeys("​Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...");
 		//plats
 		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_TextField2_ctl00_TextField")).clear();
 		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_TextField2_ctl00_TextField")).sendKeys("Chalmersplatsen");
 		//startDatum
 		Thread.sleep(3000);
-		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_StartDate_ctl00_DateTimeField_DateTimeFieldDate")).sendKeys("2017-03-23");
-		//slutDatum
-		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_EndDate_ctl00_DateTimeField_DateTimeFieldDate")).sendKeys("2017-03-24");
+		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_StartDate_ctl00_DateTimeField_DateTimeFieldDate")).sendKeys("2017-03-06");
+		//slutDatun
+		driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_EndDate_ctl00_DateTimeField_DateTimeFieldDate")).sendKeys("2017-03-06");
 		new Select(driver.findElement(By.id("ctl00_PlaceHolderMain_ctl01_ctl04_EndDate_ctl00_DateTimeField_DateTimeFieldDateHours"))).selectByVisibleText("23:");
+		//driver.findElement(By.id("ctl00_PageStateActionButton")).click();
+		driver.findElement(By.xpath("//li[@id='Ribbon.PublishTab-title']/a/span")).click();
 		//publicera
 		WebElement pub;
 		pub= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='Ribbon.PublishTab-title']/a/span[1]")));
