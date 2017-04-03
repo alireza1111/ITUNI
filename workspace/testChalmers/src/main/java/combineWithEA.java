@@ -12,6 +12,10 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import eyeautomate.ScriptLoggerTest;
+import eyeautomate.ScriptRunner;
+
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class combineWithEA {
@@ -23,19 +27,19 @@ public class combineWithEA {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe"); //gecko driver till Firefox
+	System.setProperty("webdriver.gecko.driver", "\\\\sol.ita.chalmers.se\\groups\\its\\IT-Utveckling\\Testverksamhet\\EyeAutomate\\geckodriver-v0.14.0-win64\\geckodriver.exe"); //gecko driver till Firefox
     driver = new FirefoxDriver();
     baseUrl = "https://admin-uat.portal.chalmers.se/sv/Sidor/default.aspx";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
-  public void testId132() throws Exception {
+  public void testIdEA() throws Exception {
 		WebDriverWait wait = (new WebDriverWait(driver, 30));			//explicit wait
-		//driver.get(baseUrl);
+		driver.get(baseUrl);
         ScriptRunner scriptRunner = new ScriptRunner(new ScriptLoggerTest());
-        scriptRunner.setParameter("ImageFolder", "C:/EyeAutomate/images");
-        scriptRunner.runScript("C:/EyeAutomate/scripts/myscript.txt");
+        scriptRunner.setParameter("ImageFolder", "D:/EyeAutomate1.5/images");
+        scriptRunner.runScript("D:/EyeAutomate1.5/scripts/EAinEclipse.txt");
 		WebElement CalTab;
 		CalTab= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#ctl00_ctl43_ctl00_search_all_chalmers_se_sv_field")));
 		CalTab.clear();
@@ -91,6 +95,6 @@ public class combineWithEA {
   }
   public static void main(String[] args) throws Exception {                    
       JUnitCore.main(
-        "IDsökning");            
+        "combineWithEA");            
 }
 }
