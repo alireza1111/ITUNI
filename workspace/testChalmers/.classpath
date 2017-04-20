@@ -22,7 +22,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
@@ -32,75 +32,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/cglib-nodep-3.2.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/commons-codec-1.10.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/commons-exec-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/commons-io-2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/commons-lang3-3.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/cssparser-0.9.20.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/gson-2.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/guava-19.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/hamcrest-library-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/htmlunit-2.23.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/htmlunit-core-js-2.23.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/httpclient-4.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/httpcore-4.4.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/httpmime-4.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/javax.servlet-api-3.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/jetty-io-9.2.13.v20150730.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/jetty-util-9.2.13.v20150730.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/jna-4.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/jna-platform-4.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/junit-4.12.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/neko-htmlunit-2.23.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/netty-3.5.7.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/phantomjsdriver-1.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/sac-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/serializer-2.7.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/websocket-api-9.2.15.v20160210.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/websocket-client-9.2.15.v20160210.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/websocket-common-9.2.15.v20160210.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/xalan-2.7.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/xercesImpl-2.11.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/selenium-java-3.0.1/lib/xml-apis-1.4.01.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/cglib-nodep-3.2.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/commons-codec-1.10.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/commons-exec-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/commons-io-2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/commons-lang3-3.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/cssparser-0.9.20.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/gson-2.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/guava-19.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/hamcrest-library-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/htmlunit-2.23.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/htmlunit-core-js-2.23.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/httpclient-4.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/httpcore-4.4.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/httpmime-4.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/javax.servlet-api-3.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/jetty-io-9.2.13.v20150730.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/jetty-util-9.2.13.v20150730.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/jna-4.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/jna-platform-4.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/junit-4.12.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/neko-htmlunit-2.23.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/netty-3.5.7.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/phantomjsdriver-1.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/sac-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/serializer-2.7.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/websocket-api-9.2.15.v20160210.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/websocket-client-9.2.15.v20160210.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/websocket-common-9.2.15.v20160210.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/xalan-2.7.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/xercesImpl-2.11.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/lib/xml-apis-1.4.01.jar"/>
-	<classpathentry kind="lib" path="C:/Users/alidav/Downloads/WebDriver/client-combined-3.0.1-nodeps.jar"/>
-	<classpathentry kind="lib" path="D:/EyeAutomate1.5/EyeAutomate.jar" sourcepath="D:/EyeAutomate1.5"/>
-	<classpathentry kind="lib" path="D:/EyeAutomate1.5/EyeAutomateLaunchpad.jar"/>
-	<classpathentry kind="lib" path="D:/EyeAutomate1.5/EyeAutomateStudio.jar"/>
+	<classpathentry kind="var" path="M2_REPO"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
