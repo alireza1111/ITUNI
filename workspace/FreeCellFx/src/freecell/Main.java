@@ -5,7 +5,11 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
-
+/**
+ * FreeCell application primary developed by charlesrgould on GitHub and Edited by Alireza Davoudian
+ * @author alidav
+ *
+ */
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
