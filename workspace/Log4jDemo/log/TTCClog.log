@@ -1,0 +1,139 @@
+2017-04-21 17:48:42,743 [main] INFO ID134_Log4j - Navigating to default page of Chalmers website.
+2017-04-21 17:48:51,899 [main] INFO ID134_Log4j - Waits until news tab appears.
+2017-04-21 17:48:52,084 [main] INFO ID134_Log4j - Click news tab
+2017-04-21 17:48:54,260 [main] INFO ID134_Log4j - Click news tab
+2017-04-21 17:48:55,860 [main] INFO ID134_Log4j - Waits until Webbplatsåtgärder appears
+2017-04-21 18:04:56,973 [main] INFO ID134_Log4j - Navigating to default page of Chalmers website.
+2017-04-21 18:05:06,964 [main] INFO ID134_Log4j - Waits until news tab appears.
+2017-04-21 18:05:07,144 [main] INFO ID134_Log4j - Click news tab
+2017-04-21 18:05:08,890 [main] INFO ID134_Log4j - Click news tab
+2017-04-21 18:05:11,057 [main] INFO ID134_Log4j - Waits until Webbplatsåtgärder appears
+2017-04-21 18:13:31,132 [main] INFO ID134_Log4j - Navigating to default page of Chalmers website.
+2017-04-21 18:13:41,557 [main] INFO ID134_Log4j - Waits until news tab appears.
+2017-04-21 18:13:41,645 [main] INFO ID134_Log4j - Click news tab
+2017-04-21 18:13:43,227 [main] INFO ID134_Log4j - Click news tab
+2017-04-21 18:13:45,063 [main] INFO ID134_Log4j - Waits until Webbplatsåtgärder appears
+2017-04-21 18:14:15,237 [main] ERROR ID134_Log4j - Error happened!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//*[@id='zz7_SiteActionsMenu_t'] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'AOS391', ip: '129.16.130.58', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\alidav\AppData\Local\Temp\rust_mozprofile.gSeziG8tOZai, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=6.1, moz:processID=6696, browserName=firefox, platformName=windows_nt}]
+Session ID: ab6f1e35-5627-44f0-bfd1-a554d4152790
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
+	at ID134_Log4j.main(ID134_Log4j.java:48)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: .//*[@id='zz7_SiteActionsMenu_t']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'AOS391', ip: '129.16.130.58', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\alidav\AppData\Local\Temp\rust_mozprofile.gSeziG8tOZai, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=6.1, moz:processID=6696, browserName=firefox, platformName=windows_nt}]
+Session ID: ab6f1e35-5627-44f0-bfd1-a554d4152790
+*** Element info: {Using=xpath, value=.//*[@id='zz7_SiteActionsMenu_t']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:127)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:93)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:42)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 1 more
+2017-04-21 18:22:05,703 [main] INFO ID134_Log4j - Navigating to default page of Chalmers website.
+2017-04-21 18:22:15,762 [main] INFO ID134_Log4j - Waits until news tab appears.
+2017-04-21 18:22:15,875 [main] INFO ID134_Log4j - Click news tab
+2017-04-21 18:22:17,625 [main] INFO ID134_Log4j - Click more news button
+2017-04-21 18:22:22,639 [main] INFO ID134_Log4j - Waits until Webbplatsåtgärder appears
+2017-04-21 18:22:52,699 [main] ERROR ID134_Log4j - Error happened!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//*[@id='zz7_SiteActionsMenu_t'] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'AOS391', ip: '129.16.130.58', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\alidav\AppData\Local\Temp\rust_mozprofile.A7fKNizHNymi, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=6.1, moz:processID=8068, browserName=firefox, platformName=windows_nt}]
+Session ID: 07a9e08a-7e3b-4ab8-9644-89bcf85f1ca0
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
+	at ID134_Log4j.main(ID134_Log4j.java:49)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: .//*[@id='zz7_SiteActionsMenu_t']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'AOS391', ip: '129.16.130.58', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\alidav\AppData\Local\Temp\rust_mozprofile.A7fKNizHNymi, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=6.1, moz:processID=8068, browserName=firefox, platformName=windows_nt}]
+Session ID: 07a9e08a-7e3b-4ab8-9644-89bcf85f1ca0
+*** Element info: {Using=xpath, value=.//*[@id='zz7_SiteActionsMenu_t']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:127)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:93)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:42)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 1 more
+2017-04-21 18:24:29,562 [main] INFO ID134_Log4j - Navigating to default page of Chalmers website.
+2017-04-21 18:24:38,413 [main] INFO ID134_Log4j - Waits until news tab appears.
+2017-04-21 18:24:38,579 [main] INFO ID134_Log4j - Click news tab
+2017-04-21 18:24:40,273 [main] INFO ID134_Log4j - Click more news button
+2017-04-21 18:24:45,288 [main] INFO ID134_Log4j - Waits until Webbplatsåtgärder appears
+2017-04-21 18:25:15,362 [main] ERROR ID134_Log4j - Error happened!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//*[@id='zz7_SiteActionsMenu_t'] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'AOS391', ip: '129.16.130.58', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\alidav\AppData\Local\Temp\rust_mozprofile.EQhrZYc6PWti, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=6.1, moz:processID=6396, browserName=firefox, platformName=windows_nt}]
+Session ID: 303158c4-0774-447e-a66f-11cab7c1730b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
+	at ID134_Log4j.main(ID134_Log4j.java:49)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: .//*[@id='zz7_SiteActionsMenu_t']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
+System info: host: 'AOS391', ip: '129.16.130.58', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\alidav\AppData\Local\Temp\rust_mozprofile.EQhrZYc6PWti, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.2, platformVersion=6.1, moz:processID=6396, browserName=firefox, platformName=windows_nt}]
+Session ID: 303158c4-0774-447e-a66f-11cab7c1730b
+*** Element info: {Using=xpath, value=.//*[@id='zz7_SiteActionsMenu_t']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:127)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:93)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:42)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 1 more
