@@ -1,5 +1,9 @@
 eclipse.preferences.version=1
+encoding//src/main/java=Cp1252
+encoding//src/main/resources=Cp1252
+encoding//src/test/java=Cp1252
 encoding//src/test/java/se/chalmers/tests/ID1111.java=UTF-8
+encoding//src/test/java/se/chalmers/tests/ID1111_extentReport.java=UTF-8
 encoding//src/test/java/se/chalmers/tests/ID1113.java=UTF-8
 encoding//src/test/java/se/chalmers/tests/ID1114.java=UTF-8
 encoding//src/test/java/se/chalmers/tests/ID1115.java=UTF-8
@@ -10,3 +14,5 @@ encoding//src/test/java/se/chalmers/tests/ID134.java=UTF-8
 encoding//src/test/java/se/chalmers/tests/ID135.java=UTF-8
 encoding//src/test/java/se/chalmers/tests/ID136.java=UTF-8
 encoding//src/test/java/se/chalmers/tests/ID243.java=UTF-8
+encoding//src/test/resources=Cp1252
+encoding/<project>=Cp1252
